@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ysignalslot by yigityuce</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ysignalslot</h1>
+        <p>Header only c++ signal slot mechanism implemantation</p>
+
+        <p class="view"><a href="https://github.com/yigityuce/YSignalSlot">View the Project on GitHub <small>yigityuce/YSignalSlot</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/yigityuce/YSignalSlot/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/yigityuce/YSignalSlot/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/yigityuce/YSignalSlot">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="ysignalslot" class="anchor" href="#ysignalslot"><span class="octicon octicon-link"></span></a>YSignalSlot</h1>
+
+<p>YSignalSlot is a header only C++ library. It is an implementation of signal-slot mechanism via
+C++. It is similar to C++ signal, Boost::signal and SigSlot. It intensively uses C++11 features.</p>
+
+<hr><p>Advantages:</p>
+
+<ul>
+<li>Almost everything is compile-time. So it is fast.</li>
+<li>It can be used with single slot function or unlimited slot functions.</li>
+<li>“emit” function’s return type is pointer of your actual slot function’s return type and it
+can be any type.</li>
+<li>It supports “void” return type.</li>
+<li>Slot(s) can be set to enable or disable. If slot(s) is/are disabled, signal can’t emit
+this/these slot(s).</li>
+<li>If slot which emitted is disabled or its return type is void, “emit” function returns “NULL”
+pointer.</li>
+<li>It works with member slot functions.</li>
+<li>Slot functions’ signatures are converted and stored as string.</li>
+<li>Slot functions’ argument counts and receivers are stored.</li>
+<li>It uses meta programming methods for “static for loop” and “static if”.</li>
+<li>Signals can be used nested.</li>
+<li>Receivers can be “this” pointer.</li>
+<li>It is free and LGPL licensed.</li>
+<li>It uses C++11 features.</li>
+</ul><p>Disadvantages:</p>
+
+<ul>
+<li>It works only member functions.</li>
+<li>Executable size may be large. Because codes generated at compile-time, not run-time.</li>
+<li>It doesn’t works with “const” member functions. ( like “int function1(int) const;” )</li>
+<li>Users must add “-std=c++0x” flag to compiler. This is required for using C++11.</li>
+<li>It generates a struct inside the class where you define signal. So it uses a little more code
+size.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/yigityuce">yigityuce</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
