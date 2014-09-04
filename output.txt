@@ -1,0 +1,265 @@
+
+#### I'm TestClass_InClass_SingleSignal::getAbsolute(-10) function.
+Output of "Signal1->emit(-10)"         : 0x7fff5765128c
+
+#### I'm TestClass_InClass_SingleSignal::getAbsolute(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+Output of "Signal1->getArgumentCount()": 1
+Output of "Signal1->getSlotSign()"     : (unsignedint)(TestClass_InClass_SingleSignal::*getAbsolute)(int)
+Output of "Signal1->isEnabled()"       : false
+Output of first if(slot disabled)      : Ooopss! Your slot is not enabled now.
+Output of "Signal1->isEnabled()"       : true
+
+#### I'm TestClass_InClass_SingleSignal::getAbsolute(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+--------------------------------------------------------------------------------------------------------------
+
+Output of "signalGroup1->getSlotCount()"         : 4
+
+Output of "SignalGroup1->getSlotSign<0>()"       : (int)(TestClass_InClass_MultiSignal::*add)(int,int)
+Output of "SignalGroup1->getArgumentCount<0>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<1>()"       : (int)(TestClass_InClass_MultiSignal::*subtract)(int,int)
+Output of "SignalGroup1->getArgumentCount<1>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<2>()"       : (int)(TestClass_InClass_MultiSignal::*multiply)(int,int)
+Output of "SignalGroup1->getArgumentCount<2>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<3>()"       : (int)(TestClass_InClass_MultiSignal::*divide)(int,int)
+Output of "SignalGroup1->getArgumentCount<3>()"  : 2
+
+Output of "SignalGroup1->emitAll(10,3)" (NO RETURN):
+#### I'm TestClass_InClass_MultiSignal::add(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal::subtract(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal::multiply(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal::divide(10,3) function.
+
+
+Emitting all signal one by one. This type emitting has a return value.
+
+#### I'm TestClass_InClass_MultiSignal::add(21,3) function.
+Output of "SignalGroup1->emit<0>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal::add(21,3) function.
+Output of "*(SignalGroup1->emit<0>(21, 3))"      : 24
+
+
+#### I'm TestClass_InClass_MultiSignal::subtract(21,3) function.
+Output of "SignalGroup1->emit<1>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal::subtract(21,3) function.
+Output of "*(SignalGroup1->emit<1>(21, 3))"      : 18
+
+
+#### I'm TestClass_InClass_MultiSignal::multiply(21,3) function.
+Output of "SignalGroup1->emit<2>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal::multiply(21,3) function.
+Output of "*(SignalGroup1->emit<2>(21, 3))"      : 63
+
+
+#### I'm TestClass_InClass_MultiSignal::divide(21,3) function.
+Output of "SignalGroup1->emit<3>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal::divide(21,3) function.
+Output of "*(SignalGroup1->emit<3>(21, 3))"      : 7
+
+Output of "SignalGroup1->isEnabled(0)"           : false
+Output of "SignalGroup1->isEnabled(1)"           : false
+Output of "SignalGroup1->isEnabled(2)"           : true
+Output of "SignalGroup1->isEnabled(3)"           : true
+Output of "SignalGroup1->emitAll(5,2)" (0,1 DISABLED):
+#### I'm TestClass_InClass_MultiSignal::multiply(5,2) function.
+
+#### I'm TestClass_InClass_MultiSignal::divide(5,2) function.
+
+
+Emit all signals one by one and check return values.
+Output of "SignalGroup1->emit<0>(502, 2)"        : NULL
+
+Output of "SignalGroup1->emit<1>(502, 2)"        : NULL
+
+
+#### I'm TestClass_InClass_MultiSignal::multiply(502,2) function.
+Output of "*(SignalGroup1->emit<2>(502, 2))"     : 1004
+
+
+#### I'm TestClass_InClass_MultiSignal::divide(502,2) function.
+Output of "*(SignalGroup1->emit<3>(502, 2))"     : 251
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+#### I'm TestClass_OtherClass_SingleSignal1::getAbsolute(-10) function.
+Output of "Signal1->emit(-10)"         : 0x7fff5765128c
+
+#### I'm TestClass_OtherClass_SingleSignal1::getAbsolute(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+Output of "Signal1->getArgumentCount()": 1
+Output of "Signal1->getSlotSign()"     : (unsignedint)(TestClass_OtherClass_SingleSignal1::*getAbsolute)(int)
+Output of "Signal1->isEnabled()"       : false
+Output of first if(slot disabled)      : Ooopss! Your slot is not enabled now.
+Output of "Signal1->isEnabled()"       : true
+
+#### I'm TestClass_OtherClass_SingleSignal1::getAbsolute(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+--------------------------------------------------------------------------------------------------------------
+
+Output of "signalGroup1->getSlotCount()"         : 4
+
+Output of "SignalGroup1->getSlotSign<0>()"       : (int)(TestClass_InClass_MultiSignal0::*add)(int,int)
+Output of "SignalGroup1->getArgumentCount<0>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<1>()"       : (int)(TestClass_InClass_MultiSignal0::*subtract)(int,int)
+Output of "SignalGroup1->getArgumentCount<1>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<2>()"       : (int)(TestClass_InClass_MultiSignal1::*multiply)(int,int)
+Output of "SignalGroup1->getArgumentCount<2>()"  : 2
+
+Output of "SignalGroup1->getSlotSign<3>()"       : (int)(TestClass_InClass_MultiSignal1::*divide)(int,int)
+Output of "SignalGroup1->getArgumentCount<3>()"  : 2
+
+Output of "SignalGroup1->emitAll(10,3)" (NO RETURN):
+#### I'm TestClass_InClass_MultiSignal0::add(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal0::subtract(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal1::multiply(10,3) function.
+
+#### I'm TestClass_InClass_MultiSignal1::divide(10,3) function.
+
+
+Emitting all signal one by one. This type emitting has a return value.
+
+#### I'm TestClass_InClass_MultiSignal0::add(21,3) function.
+Output of "SignalGroup1->emit<0>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal0::add(21,3) function.
+Output of "*(SignalGroup1->emit<0>(21, 3))"      : 24
+
+
+#### I'm TestClass_InClass_MultiSignal0::subtract(21,3) function.
+Output of "SignalGroup1->emit<1>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal0::subtract(21,3) function.
+Output of "*(SignalGroup1->emit<1>(21, 3))"      : 18
+
+
+#### I'm TestClass_InClass_MultiSignal1::multiply(21,3) function.
+Output of "SignalGroup1->emit<2>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal1::multiply(21,3) function.
+Output of "*(SignalGroup1->emit<2>(21, 3))"      : 63
+
+
+#### I'm TestClass_InClass_MultiSignal1::divide(21,3) function.
+Output of "SignalGroup1->emit<3>(21, 3)"         : 0x7fff5765124c
+
+#### I'm TestClass_InClass_MultiSignal1::divide(21,3) function.
+Output of "*(SignalGroup1->emit<3>(21, 3))"      : 7
+
+Output of "SignalGroup1->isEnabled(0)"           : false
+Output of "SignalGroup1->isEnabled(1)"           : false
+Output of "SignalGroup1->isEnabled(2)"           : true
+Output of "SignalGroup1->isEnabled(3)"           : true
+Output of "SignalGroup1->emitAll(5,2)" (0,1 DISABLED):
+#### I'm TestClass_InClass_MultiSignal1::multiply(5,2) function.
+
+#### I'm TestClass_InClass_MultiSignal1::divide(5,2) function.
+
+
+Emit all signals one by one and check return values.
+Output of "SignalGroup1->emit<0>(502, 2)"        : NULL
+
+Output of "SignalGroup1->emit<1>(502, 2)"        : NULL
+
+
+#### I'm TestClass_InClass_MultiSignal1::multiply(502,2) function.
+Output of "*(SignalGroup1->emit<2>(502, 2))"     : 1004
+
+
+#### I'm TestClass_InClass_MultiSignal1::divide(502,2) function.
+Output of "*(SignalGroup1->emit<3>(502, 2))"     : 251
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+#### I'm TestClass_OtherClass_SingleSignalNested1::getAbsolute(-10) function.
+
+#### I'm TestClass_OtherClass_SingleSignalNested0::getAbsoluteWithFunc(-10) function.
+Output of "Signal1->emit(-10)"         : 0x7fff5765127c
+
+#### I'm TestClass_OtherClass_SingleSignalNested1::getAbsolute(-10) function.
+
+#### I'm TestClass_OtherClass_SingleSignalNested0::getAbsoluteWithFunc(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+Output of "Signal1->getArgumentCount()": 1
+Output of "Signal1->getSlotSign()"     : (unsignedint)(TestClass_OtherClass_SingleSignalNested1::*getAbsolute)(int)
+Output of "Signal1->isEnabled()"       : false
+Output of first if(slot disabled)      : Ooopss! Your slot is not enabled now.
+Output of "Signal1->isEnabled()"       : true
+
+#### I'm TestClass_OtherClass_SingleSignalNested1::getAbsolute(-10) function.
+
+#### I'm TestClass_OtherClass_SingleSignalNested0::getAbsoluteWithFunc(-10) function.
+Output of "*(Signal1->emit(-10))"      : 10
+
+--------------------------------------------------------------------------------------------------------------
+
+Output of "signalGroup1->getSlotCount()"         : 2
+
+Output of "SignalGroup1->getSlotSign<0>()"       : (void)(TestClass_InClass_MultiSignalNested1::*func1)()
+Output of "SignalGroup1->getArgumentCount<0>()"  : 0
+
+Output of "SignalGroup1->getSlotSign<1>()"       : (void)(TestClass_InClass_MultiSignalNested1::*func2)()
+Output of "SignalGroup1->getArgumentCount<1>()"  : 0
+
+Output of "SignalGroup1->emitAll()" (NO RETURN)  :
+#### I'm TestClass_InClass_MultiSignalNested1::func1() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+
+#### I'm TestClass_InClass_MultiSignalNested1::func2() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+
+
+Emitting all signal one by one. This type emitting has a return value.
+
+#### I'm TestClass_InClass_MultiSignalNested1::func1() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+Output of "SignalGroup1->emit<0>()"              : 0
+
+#### I'm TestClass_InClass_MultiSignalNested1::func2() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+Output of "SignalGroup1->emit<1>()"              : 0
+Output of "SignalGroup1->isEnabled(0)"           : false
+Output of "SignalGroup1->isEnabled(1)"           : true
+Output of "SignalGroup1->emitAll()" (0 DISABLED) :
+#### I'm TestClass_InClass_MultiSignalNested1::func2() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+
+
+Emit all signals one by one and check return values.
+Output of "SignalGroup1->emit<0>()"              : NULL
+
+
+#### I'm TestClass_InClass_MultiSignalNested1::func2() function.
+
+#### I'm TestClass_InClass_MultiSignalNested0::func1() function.
+Output of "SignalGroup1->emit<1>()"              : NULL
+
+
