@@ -8,6 +8,9 @@ C++. It is similar to C++ signal, Boost::signal and SigSlot. It intensively uses
 
 Advantages:
 - Almost everything is compile-time. So it is fast.
+- User defined signal names.
+- No installation, extends or MOC. It is header only.
+- It doesn't work like wiring something(or binding), it works like storing(or container).
 - It can be used with single slot function or unlimited slot functions.
 - “emit” function’s return type is pointer of your actual slot function’s return type and it
 can be any type.
@@ -40,6 +43,7 @@ pointer.
 
 Disadvantages:
 - It works only member functions.
+- It isn't thread safe yet.
 - Executable size may be large. Because codes generated at compile-time, not run-time.
 - It doesn’t works with “const” member functions. ( like “int function1(int) const;” )
 - Users must add “-std=c++0x” flag to compiler. This is required for using C++11.
