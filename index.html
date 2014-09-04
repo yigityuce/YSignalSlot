@@ -38,6 +38,9 @@ C++. It is similar to C++ signal, Boost::signal and SigSlot. It intensively uses
 
 <ul>
 <li>Almost everything is compile-time. So it is fast.</li>
+<li>User defined signal names.</li>
+<li>No installation, extends or MOC. It is header only.</li>
+<li>It doesn't work like wiring something(or binding), it works like storing(or container).</li>
 <li>It can be used with single slot function or unlimited slot functions.</li>
 <li>“emit” function’s return type is pointer of your actual slot function’s return type and it
 can be any type.</li>
@@ -58,6 +61,7 @@ pointer.</li>
 
 <ul>
 <li>It works only member functions.</li>
+<li>It isn't thread safe yet.</li>
 <li>Executable size may be large. Because codes generated at compile-time, not run-time.</li>
 <li>It doesn’t works with “const” member functions. ( like “int function1(int) const;” )</li>
 <li>Users must add “-std=c++0x” flag to compiler. This is required for using C++11.</li>
